@@ -3,7 +3,7 @@ const connection = require("./connection");
 
 const orm = {
   selectAll: function(cb) {
-    let query = ("SELECT * FROM burgers");
+    const query = ("SELECT * FROM burgers");
     connection.query(query, function(err, result) {
       if (err) throw err;
       cb(result);
@@ -11,7 +11,7 @@ const orm = {
   },
 
   insertOne: function(name, cb) {
-    let query = ("INSERT INTO burgers SET ?");
+    const query = ("INSERT INTO burgers SET ?");
     connection.query(query, { name: name }, function(err, result) {
       if (err) throw err;
       cb(result);
@@ -19,8 +19,11 @@ const orm = {
   },
 
   updateOne: function(id, devoured, cb) {
-    let query = ("UPDATE burgers WHERE ? SET ?");
-
+    let query = ("UPDATE burgers SET ? WHERE ?");
+    connection.query(query, [{ devoured: devoured }, { id: id }], function(err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   }
 };
 
