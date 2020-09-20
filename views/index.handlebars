@@ -1,0 +1,33 @@
+<section class="container">
+  <header>
+    <h1>Eat Da Burger</h1>
+  </header>
+
+  {{!-- image goes here --}}
+
+  <div class="d-flex">
+    <div class="justify-content-start">
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="jsutify-content-end">
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <input type="text" id="name">
+    <p>Please click submit to save your burger</p>
+    <br>
+    <button id="submit" class="btn btn-primary" value="submit">Submit</button>
+  </div>
+</section>
