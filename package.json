@@ -1,0 +1,24 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "Resturant App ",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencer-alan/eat-da-burger.git"
+  },
+  "author": "Spencer Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spencer-alan/eat-da-burger/issues"
+  },
+  "homepage": "https://github.com/spencer-alan/eat-da-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}

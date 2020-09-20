@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS burger;
+CREATE DATABASE burger;
+USE burger;
+
+CREATE TABLE  burgers (
+  id INTEGER AUTO_INCREMENT NOT NULL,
+  name VARCHAR(40) NOT NULL,
+  devoured BOOLEAN DEFAULT false,
+  PRIMARY KEY (id)
+);

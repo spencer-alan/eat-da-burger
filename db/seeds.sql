@@ -1,0 +1,1 @@
+INSERT INTO burgers (name) VALUES ("Cheese Burger"), ("Bacon Burger"), ("Impossible Burger");
