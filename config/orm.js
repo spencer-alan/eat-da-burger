@@ -5,14 +5,14 @@ const orm = {
   selectAll: function(cb) {
     const query = ("SELECT * FROM burgers");
     connection.query(query, function(err, result) {
-      if (err) throw err;
+      if (err)  throw err;
       cb(result);
     });
   },
 
-  insertOne: function(name, cb) {
+  insertOne: function(burger_name, cb) {
     const query = ("INSERT INTO burgers SET ?");
-    connection.query(query, { name: name }, function(err, result) {
+    connection.query(query, { burger_name: burger_name }, function(err, result) {
       if (err) throw err;
       cb(result);
     });
