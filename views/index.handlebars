@@ -5,29 +5,31 @@
 
   {{!-- image goes here --}}
 
+  <form>
+    <div class="form-group">
+      <input id="burgerName" type="text" placeholder="Add a Burger" class="form-control" name="burger_name">
+    </div>
+    <button id="submit" type="submit" class="btn btn-primary">Add da Burger</button>
+  </form>
   <div class="d-flex">
     <div class="justify-content-start">
+      <h2>Burgers to eat!</h2>
       <ul>
         {{#each burgers}}
           {{#unless devoured}}
+            {{> burger-block devoured=true}}
           {{/unless}}
         {{/each}}
       </ul>
     </div>
-    <div class="jsutify-content-end">
+    <div class="justify-content-end">
+      <h2>Burgers that have been eaten!</h2>
       <ul>
         {{#each burgers}}
           {{#if devoured}}
+            {{> burger-block devoured=false}}
           {{/if}}
         {{/each}}
       </ul>
     </div>
   </div>
-
-  <div class="container">
-    <input type="text" id="name">
-    <p>Please click submit to save your burger</p>
-    <br>
-    <button id="submit" class="btn btn-primary" value="submit">Submit</button>
-  </div>
-</section>
